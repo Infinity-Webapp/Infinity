@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head of the page -->
+
+<head>
+    <!-- Encoding -->
+    <meta charset="UTF-8">
+    <!-- Setting viewport for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="/common/css/tailwind.css" type="text/css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="/common/css/style.css">
+    <!-- CSS for loader -->
+    <link rel="stylesheet" type="text/css" href="/common/css/loader.css">
+    <!-- Connecting socket io to the document -->
+    <!-- <script defer src="http://127.0.0.1:8000/socket.io/socket.io.js"></script> -->
+    <!-- Scripts  -->
+    <!-- <script defer src="client/client.js"></script> -->
+    <!-- Client Script to communicate with server | Random Chat -->
+    <script defer src="script/script.js"></script>
+    <!-- Including font | Baloo bhai -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Title of the page -->
+    <title>Document</title>
+</head>
+<!-- Header ends -->
+
+<!-- Body of the page -->
+
+<body onload="loaded()">
+    <!-- Loader | only shows when connection is a bit slow ! -->
+    <div class="sk-cube-grid" id="loader">
+        <div class="sk-cube sk-cube1"></div>
+        <div class="sk-cube sk-cube2"></div>
+        <div class="sk-cube sk-cube3"></div>
+        <div class="sk-cube sk-cube4"></div>
+        <div class="sk-cube sk-cube5"></div>
+        <div class="sk-cube sk-cube6"></div>
+        <div class="sk-cube sk-cube7"></div>
+        <div class="sk-cube sk-cube8"></div>
+        <div class="sk-cube sk-cube9"></div>
+    </div>
+    <!-- Loader section ends -->
+
+
+
+
+
+    <!-- Header of the page -->
+    <header class="text-gray-500 body-font" id="header">
+        <!-- Navigation Bar -->
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+
+
+
+            <!-- Navigation bar items -->
+            <nav class="flex lg:w-1/3 flex-wrap p-5 flex-col md:flex-row items-center">
+
+
+                <!-- Navbar item 1 -->
+                <a class="mr-5 hover:text-white">
+
+                    <!-- Image for item 1 -->
+                    <img src="/media/images/online-chat.svg" alt="Online Chat Illustration" class="navbar-img p-4">
+
+                    <!-- Text for item 1 -->
+                    <p class="navbar-text">Join Room</p>
+
+                </a>
+
+
+                <!-- Navbar item 2 -->
+                <a class="mr-5 hover:text-white">
+
+                    <!-- Image for item 2 -->
+                    <img src="/media/images/chatting.svg" alt="Chat Admin Illustration" class="navbar-img p-4">
+
+                    <!-- Text for item 2 -->
+                    <p class="navbar-text">Create Room</p>
+
+                </a>
+
+
+                <!-- Navbar item 3 -->
+                <a class="mr-5 hover:text-white ">
+
+                    <!-- Image for item 3 -->
+                    <img src="/media/images/global.jpg" alt="Global Chat Illustration" class="navbar-img">
+
+                    <!-- Text for item 3 -->
+                    <p class="navbar-text">Random Chat</p>
+
+                </a>
+                <!-- Navbar item list ends -->
+
+
+
+            </nav>
+
+
+
+            <!-- Content floating on right : Logo and name of the website -->
+            <a class="flex order-first lg:order-none lg:w-1/3 title-font font-medium items-center lg:items-center lg:justify-center text-white mb-4 md:mb-0"
+                href="/media/videos/infinity.gif" target="_blank">
+
+
+                <!-- logo : gif -->
+                <img height="300px" width="300px" src="/media/videos/infinity.gif" alt="infinity logo">
+
+
+            </a>
+
+
+
+            <!-- Quick action button | action : Register -->
+            <a href="/index.html" target="_self">
+
+
+                <button
+                    class="lg:w-1/3 hover-bold inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none rounded text-base mt-4 md:mt-0 btn-nav navbar-quick-action mx-6 ">Sign
+                    In
+
+                    <!-- Icon for the button -->
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+
+                </button>
+
+
+            </a>
+
+
+
+            <!-- Quick action button | action : Register -->
+            <a href="/register/register.html" target="_self">
+
+
+                <button
+                    class="lg:w-1/3 hover-bold inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none rounded text-base mt-4 md:mt-0 btn-nav navbar-quick-action">Sign
+                    Up
+
+                    <!-- Icon for the button -->
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+
+                    <p>&nbsp;</p>
+
+                </button>
+
+
+            </a>
+
+
+
+        </div>
+        <!-- Navigation Bar Ends -->
+    </header>
+    <!-- Header Ends -->
+
+
+
+
+
+    <!-- Main Content of the page -->
+    <section id="section-one">
+        <br />
+        <div class="container px-5 py-12 mx-auto flex flex-wrap">
+
+            <div class="flex flex-wrap lg:w-2/5 w-full">
+                <div class="smartphone" id="smartphone">
+                    <div class="content w-full h-full" id="content">
+
+
+
+
+                        <div class="flex chat-head">
+
+
+
+                            <div class="flex w-5/6">
+                                <a href="/index.html">
+                                    <img height="50px" width="50px" class="px-2 py-2" src="/media/icons/back.svg"
+                                        alt="Back Button (Unable to load)">
+                                </a>
+                                <p style="font-weight: bolder; font-size: large;" class="p-3 text-white">Random Chat</p>
+                            </div>
+
+
+
+                            <div class="setting flex w-1/6 m-2" onclick="showChatSetting()"><img
+                                    src="/media/icons/settings.svg" alt="click to open settings" height="25px"
+                                    width="25px">
+                                <span class="setting-window" id="setting-window">
+                                    <span class="dark hover:bg-gray-800" onclick="toggleTheme('toLight')" id="dark">Switch to Dark
+                                        Theme</span>
+                                    <span class="light hover:bg-gray-800" onclick="toggleTheme('toDark')" id="light">Switch to Light
+                                        Theme</span>
+                                    <span>
+                                        <button class="hover:bg-gray-800" id="btn-clear-chat" style="outline: none;">Clear Chat</button>
+                                    </span>
+                                </span>
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+                        <div class="chat-container" id="chat-container">
+                            <!-- <div class="msg message-recieved">
+                                <p class="username">username</p>
+                                <p class="message">hello</p>
+                            </div>
+                            <div class="msg message-sent">
+                                <p class="username">username</p>
+                                <p class="message">hello</p>
+                            </div> -->
+                        </div>
+
+
+
+
+                        <div class="flex message-sender-wrapper" id="message-sender-wrapper">
+
+
+
+                            <textarea
+                                class="flex-grow m-2 py-2 px-4 mr-1 rounded-full border border-gray-300 bg-gray-200 resize-none"
+                                rows="1" placeholder="Message..." style="border-color: #1DA1F2;"
+                                id="message-short"></textarea>
+
+
+
+                            <button class="m-2" style="outline: none;" id="send-short">
+
+
+
+                                <svg class="svg-inline--fa text-green-400 fa-paper-plane fa-w-16 w-12 h-12 py-2 mr-2"
+                                    aria-hidden="true" focusable="false" data-prefix="fas" data-icon="paper-plane"
+                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+
+
+                                    <path fill="#1DA1F2"
+                                        d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z" />
+
+
+                                </svg>
+
+
+
+                            </button>
+
+
+
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap lg:w-3/5 my-6 mobile-display-none">
+                <div
+                    class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+                    <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Random Chat</h1>
+                    <div class="flex w-full md:justify-start justify-center">
+                        <textarea
+                            class="bg-black rounded mr-4 text-white border border-white focus:outline-none focus:border-red-500 text-base px-4 md:w-full lg:w-full xl:w-1/2 w-2/4 resize-none p-2"
+                            rows="5" id="message-long" placeholder="Message . ."></textarea>
+                    </div>
+                    <div class="flex justify-center my-4">
+                        <button
+                            class="btn-search inline-flex text-white border-0 py-2 px-20 focus:outline-none rounded text-lg"
+                            id="send-long">
+                            <svg class="svg-inline--fa text-green-400 fa-paper-plane fa-w-16 w-10 h-10 py-2 mr-2"
+                                aria-hidden="true" focusable="false" data-prefix="fas" data-icon="paper-plane"
+                                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+
+                                <path fill="black"
+                                    d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z" />
+
+                            </svg>
+                        </button>
+                        <button
+                            class="btn-search inline-flex text-white border-0 mx-6 py-4 px-6 focus:outline-none rounded text-lg"
+                            id="btn-clear">Clear</button>
+                    </div>
+                    <div class="flex lg:flex-row md:flex-col text-gray-300">
+                        <button
+                            class="bg-red-800 inline-flex py-3 px-5 rounded-lg items-center hover:bg-pink-700 hover:text-white focus:outline-none">
+                            <img src="/media/icons/anonymous.svg" fill="black" class="w-6 h-6" viewBox="0 0 512 512">
+                            </img>
+                            <span class="ml-4 flex items-start flex-col leading-none">
+                                <span class="text-xs text-gray-500 mb-1">Chat</span>
+                                <span class="title-font font-medium">Anonymous</span>
+                            </span>
+                        </button>
+                        <button
+                            class="bg-pink-800 inline-flex py-3 px-5 rounded-lg items-center hover:bg-red-700 hover:text-white focus:outline-none lg:ml-4 md:ml-0 ml-4 md:mt-4 mt-0 lg:mt-0">
+                            <img src="/media/icons/user.svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 305 305">
+                            </img>
+                            <span class="ml-4 flex items-start flex-col leading-none">
+                                <span class="text-xs text-gray-500 mb-1">Chat With</span>
+                                <span class="title-font font-medium">Your ID</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br />
+    </section>
+
+
+
+
+
+    <!-- Footer of the webpage -->
+    <footer class="text-gray-500 body-font onload" id="footer">
+
+
+
+
+        <!-- Quick links section -->
+        <div class="container px-5 py-12 mx-auto">
+            <div class="flex flex-wrap md:text-left text-center order-first">
+                <!-- List 1 of quick links -->
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <br />
+                    <!-- List -->
+                    <nav class="list-none mb-10">
+                        <!-- item 1 -->
+                        <li>
+                            <a class="text-gray-600 hover:text-white" href="/login/login.html">Sign In</a>
+                        </li>
+                        <!-- item 2 -->
+                        <li>
+                            <a href="/register/register.html" target="_self"
+                                class="text-gray-600 hover:text-white">Sign Up</a>
+                        </li>
+                    </nav>
+                </div>
+                <!-- List 1 ends here -->
+
+                <!-- List 2 of quick links -->
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <!-- Category of the items -->
+                    <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Chat Links</h2>
+                    <!-- List -->
+                    <nav class="list-none mb-10">
+                        <!-- item 1 -->
+                        <li>
+                            <a class="text-gray-600 hover:text-white">Join Chat Room</a>
+                        </li>
+                        <!-- item 2 -->
+                        <li>
+                            <a class="text-gray-600 hover:text-white">Host Chat Room</a>
+                        </li>
+                        <!-- item 3 -->
+                        <li>
+                            <a class="text-gray-600 hover:text-white">Randomly Chat with Anyone</a>
+                        </li>
+                    </nav>
+                </div>
+                <!-- List 2 ends here -->
+
+                <!-- Quick join -->
+                <!-- Gonna add functionalities before next commit -->
+                <form class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Quickly Join Chat <br />
+                        (Anonymous)</h2>
+                    <div
+                        class="flex xl:flex-no-wrap md:flex-no-wrap lg:flex-wrap flex-wrap justify-center md:justify-start">
+                        <input
+                            class="w-40 bg-black sm:w-auto rounded text-white xl:mr-4 lg:mr-0 sm:mr-4 mr-2 border border-white focus:outline-none focus:border-red-500 text-base py-2 px-4"
+                            placeholder="enter chat code" type="text" required>
+                        <button
+                            class="btn-search lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Button</button>
+                    </div>
+                    <p class="text-gray-600 text-sm mt-2 md:text-left text-center">This section provide instant joining
+                        feature
+                        <br class="lg:block hidden">to any chat, anonymously.
+                    </p>
+                </form>
+                <!-- google search fragment ends here -->
+            </div>
+        </div>
+        <!-- Quick links section ends here -->
+
+
+
+
+        <!-- Info section -->
+        <div class="footer-end">
+            <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+                <!-- Logo -->
+                <a class="flex title-font font-medium items-center md:justify-start justify-center text-white mb-4 md:mb-0"
+                    href="/media/videos/logo.gif" target="_blank">
+                    <!-- logo : Video -->
+                    <img height="100px" width="100px" style="border-radius: 50%;" src="/media/videos/logo.gif"
+                        alt="infinity logo">
+                    <!-- Website name | Infinity -->
+                    <span class="ml-3 text-xl">Infinity</span>
+                </a>
+                <!-- Logo part ends -->
+
+                <!-- Mail To -->
+                <p class="text-sm text-gray-600 sm:ml-6 sm:mt-0 mt-4"> infinity —
+                    <a href="mailto:contact.infinity.chat@gmail.com" class="text-blue-600 ml-1"
+                        rel="noopener noreferrer">contact us</a>
+                </p>
+                <!-- Mail To ends -->
+
+                <!-- Social media links -->
+                <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                    <!-- facebook -->
+                    <a class="text-gray-600">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg>
+                    </a>
+                    <!-- Github -->
+                    <a href="https://github.com/infinity-UI/infinity" target="_blank" class="ml-3 text-gray-600">
+                        <img src="/media/images/github.svg" class="w-6 h-6">
+                        </img>
+                    </a>
+                    <!-- Instagram -->
+                    <a class="ml-3 text-gray-600">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                        </svg>
+                    </a>
+                    <!-- Linkedin -->
+                    <a class="ml-3 text-gray-600">
+                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path stroke="none"
+                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                            </path>
+                            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                        </svg>
+                    </a>
+                </span>
+                <!-- Social media icons ends here -->
+            </div>
+        </div>
+        <!-- Info section ends here -->
+
+
+
+
+    </footer>
+
+    <script>
+        function loaded() {
+                document.getElementById('loader').style.display = 'none';
+                document.getElementById('header').style.display = 'block';
+                document.getElementById('footer').style.display = 'block';
+                document.getElementById('section-one').style.display = 'block';
+            }
+    </script>
+
+</body>
+
+</html>
