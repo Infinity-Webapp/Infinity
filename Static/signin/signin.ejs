@@ -1,4 +1,4 @@
-<!-- Main page | Chat window -->
+<!-- Main page | login window -->
 <!DOCTYPE html>
 <html lang="en">
 <!-- Header of the page -->
@@ -9,13 +9,11 @@
     <!-- Setting viewport for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Tailwind CSS -->
-    <link rel="stylesheet" href="/common/css/tailwind.css" type="text/css">
+    <link rel="stylesheet" href="/css/tailwind.css" type="text/css">
     <!-- Custom CSS for improvements in tailwind.css -->
-    <link rel="stylesheet" type="text/css" href="/common/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <!-- CSS for loader -->
-    <link rel="stylesheet" type="text/css" href="/common/css/loader.css">
-    <!-- Script to add functionality to loader -->
-    <script src="Script/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/loader.css">
     <!-- Title of the page -->
     <title>Document</title>
 </head>
@@ -35,6 +33,16 @@
         <div class="sk-cube sk-cube8"></div>
         <div class="sk-cube sk-cube9"></div>
     </div>
+
+    <script>
+        function loaded() {
+            document.getElementById('loader').style.display = 'none';
+            document.getElementById('header').style.display = 'block';
+            document.getElementById('footer').style.display = 'block';
+            document.getElementById('section-login').style.display = 'block';
+        }
+    </script>
+
     <!-- Loader section ends -->
 
     <!-- Header of the page -->
@@ -311,14 +319,7 @@
         </div>
         <!-- Info section ends here -->
     </footer>
-    <script>
-        function loaded() {
-            document.getElementById('loader').style.display = 'none';
-            document.getElementById('header').style.display = 'block';
-            document.getElementById('footer').style.display = 'block';
-            document.getElementById('section-login').style.display = 'block';
-        }
-    </script>
+
 </body>
 
 </html>

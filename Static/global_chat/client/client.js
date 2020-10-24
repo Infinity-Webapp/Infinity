@@ -1,4 +1,4 @@
-const socket = io('http://127.0.0.1:8000');
+const socket = io('http://127.0.0.1:800');
 const senderButton = document.getElementById('send-short');
 const message = document.getElementById('message-short');
 const chatbox = document.getElementById('chat-container');
@@ -10,24 +10,24 @@ while (username == null || username == ' ' || username == '') {
     username = prompt("What is your Name");
 }
 
-socket.emit('i_joined', username);
+socket.emit('i_connected', username);
 
-socket.on('someone_joined', username_sender =>{
-    appendMessage({username: username_sender, message : 'Has joined the chat!!'}, 'message-recieved');
+socket.on('user_connected', username_connected =>{
+    appendMessage({username: username_connected, message : 'Joined the chat!!'}, 'message-recieved');
 });
 
 socket.on('message_recieved', message_data =>{
     appendMessage(message_data, 'message-recieved');
 });
 
-socket.on('someone-left', username_left =>{
-    appendMessage({username: username_left, message : 'Has left the chat!!'}, 'message-recieved');
+socket.on('user_disconnected', username_left =>{
+    appendMessage({username: username_left, message : 'Left the chat!!'}, 'message-recieved');
 });
 
 senderButton.addEventListener('click', (e) => {
     const sender_data = {username : 'you', message : message.value};
     appendMessage(sender_data, 'message-sent');
-    socket.emit('message-sent', sender_data);
+    socket.emit('message_sent', sender_data);
     message.value = null;
 });
 

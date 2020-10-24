@@ -1,0 +1,14 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "global_chat_server.js",
+  "scripts": {
+    "test": "nodemon global_chat_server.js"
+  },
+  "author": "suryansh",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^2.3.0"
+  }
+}
