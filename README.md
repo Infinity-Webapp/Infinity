@@ -2,7 +2,7 @@
 Intro:
 The webapp is a demonstration to a chatting system.
 
-* requirements
+ requirements
 -> knowledge of
  - HTML, CSS, JS
  - NODE.JS
