@@ -2,11 +2,11 @@
 Intro:
 The webapp is a demonstration to a chatting system.
 
- #requirements
-- knowledge of
- - HTML, CSS, JS
- - NODE.JS
- - express.js & passport.js
+ # requirements
+ - knowledge of
+   - HTML, CSS, JS
+   - NODE.JS
+   - express.js & passport.js
  microsoft visual studio code is recommended
 
 # Starting the app
@@ -23,10 +23,10 @@ The webapp is a demonstration to a chatting system.
 # Technologies used:
 
 * Main Server 
-       - Node.js, express.
-       - passport.js for login system ( Local Strategy )
-       - express flash for error messages
-* Random Chat Server - Socket.io
+- Node.js, express.
+- passport.js for login system ( Local Strategy )
+- express flash for error messages
+Random Chat Server - Socket.io
        
 * Homepage - HTML, tailwind.css, custom css for customisation in tailwind
 * Secondary Pages - ejs, tailwind.css, custom css for customisation in tailwind
