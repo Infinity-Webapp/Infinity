@@ -30,15 +30,20 @@ The webapp is a demonstration to a chatting system.
    - Socket.io
        
 * Homepage
-   - HTML, tailwind.css, custom css for customisation in tailwind
+   - HTML 
+   - tailwind.css 
+   - custom css for customisation in tailwind
 * Secondary Pages
-   - ejs, tailwind.css, custom css for customisation in tailwind
+   - ejs 
+   - tailwind.css 
+   - custom css for customisation in tailwind
+   - JS in required pages.
 
 * Media files
    - divided in 3 types 
      - icons
      - images
-     -videos
+     - videos
 
 
 # The environment variables file is not included in the repository. You must create a .env file in the root directory and add your secret key to it :
