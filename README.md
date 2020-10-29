@@ -1,5 +1,4 @@
 # Infinity
-Intro:
 The webapp is a demonstration to a chatting system.
 
  # requirements
@@ -18,7 +17,7 @@ The webapp is a demonstration to a chatting system.
       - Open shell in random-chat-server directory.
       Step 4
       - type "npm run test"
-# all your servers must be started, now you can start devloping the app
+* all your servers must be started, now you can start devloping the app
 
 # Technologies used:
 
