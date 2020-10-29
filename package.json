@@ -1,10 +1,10 @@
 {
   "name": "login-register_server",
   "version": "1.0.0",
-  "description": "",
   "main": "login_register_server.js",
   "scripts": {
-    "check": "nodemon server.js"
+    "check": "nodemon server.js",
+    "start": "node server.js"
   },
   "author": "Suryansh Kapil",
   "license": "ISC",
@@ -17,9 +17,19 @@
     "express-session": "^1.17.1",
     "fs": "0.0.1-security",
     "method-override": "^3.0.0",
-    "nodemon": "^2.0.5",
+    "nodemon": "^2.0.6",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "socket.io": "^2.3.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Infinity-Webapp/Infinity.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Infinity-Webapp/Infinity/issues"
+  },
+  "homepage": "https://github.com/Infinity-Webapp/Infinity#readme",
+  "description": ""
 }
