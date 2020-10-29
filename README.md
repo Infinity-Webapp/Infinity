@@ -23,22 +23,22 @@ The webapp is a demonstration to a chatting system.
 # Technologies used:
 
 * Main Server 
- - Node.js, express.
- - passport.js for login system ( Local Strategy )
- - express flash for error messages
+   - Node.js, express.
+   - passport.js for login system ( Local Strategy )
+   - express flash for error messages
 * Random Chat Server
- - Socket.io
+   - Socket.io
        
 * Homepage
- - HTML, tailwind.css, custom css for customisation in tailwind
+   - HTML, tailwind.css, custom css for customisation in tailwind
 * Secondary Pages
- - ejs, tailwind.css, custom css for customisation in tailwind
+   - ejs, tailwind.css, custom css for customisation in tailwind
 
 * Media files
- - divided in 3 types 
-  - icons
-  - images
-  -videos.
+   - divided in 3 types 
+     - icons
+     - images
+     -videos
 
 
 # The environment variables file is not included in the repository. You must create a .env file in the root directory and add your secret key to it :
