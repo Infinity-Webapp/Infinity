@@ -13,27 +13,27 @@ while (username == null || username == ' ' || username == '') {
 socket.emit('i_connected', username);
 
 socket.on('user_connected', username_connected =>{
-    appendMessage({username: username_connected, message : 'Joined the chat!!'}, 'message-recieved');
+    appendMessage({username: username_connected, message : 'Joined the chat!!'}, 'user-joined-or-left');
 });
 
 socket.on('message_recieved', message_data =>{
-    appendMessage(message_data, 'message-recieved');
+    appendMessage(message_data, 'message-recieved', ' ');
 });
 
 socket.on('user_disconnected', username_left =>{
-    appendMessage({username: username_left, message : 'Left the chat!!'}, 'message-recieved');
+    appendMessage({username: username_left, message : 'Left the chat!!'}, 'user-joined-or-left');
 });
 
 senderButton.addEventListener('click', (e) => {
     const sender_data = {username : 'you', message : message.value};
-    appendMessage(sender_data, 'message-sent');
+    appendMessage(sender_data, 'message-sent', " ");
     socket.emit('message_sent', sender_data);
     message.value = null;
 });
 
 senderButtonRight.addEventListener('click', (e) => {
     const sender_data = {username : 'you', message : messageRight.value};
-    appendMessage(sender_data, 'message-sent');
+    appendMessage(sender_data, 'message-sent', " ");
     socket.emit('message-sent', sender_data);
     messageRight.value = null;
 });

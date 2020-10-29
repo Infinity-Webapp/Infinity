@@ -171,6 +171,11 @@ section,
   height: 67vh;
   overflow: auto;
 }
+.user-joined-or-left{
+  background-color: yellow;
+  float: left;
+  clear: both;
+}
 .msg{
   border-radius: 12px;
   padding: 7px 15px;

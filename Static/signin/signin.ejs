@@ -1,8 +1,3 @@
-<!-- Main page | login window -->
-<!DOCTYPE html>
-<html lang="en">
-<!-- Header of the page -->
-
 <head>
     <!-- Encoding -->
     <meta charset="UTF-8">
@@ -121,34 +116,35 @@
             <div class="lg:w-1/3 md:w-2/3 mx-auto">
                 <div class="flex flex-wrap -m-2">
                     <!-- form for user login -->
-                    <form class="flex flex-wrap -m-2" action="" method="get">
+                    <form class="flex flex-wrap -m-2" action="/signin" method="POST">
                         <!-- Username input -->
                         <div class="p-2 w-full">
                             <input
+                            class="w-full rounded border border-white text-white focus:outline-none focus:border-red-700 text-base px-4 py-2"
+                                placeholder="E-mail ID" type="text" name="email" required>
+                            </div>
+                            <!-- Password input -->
+                            <div class="p-2 w-full">
+                                <input
                                 class="w-full rounded border border-white text-white focus:outline-none focus:border-red-700 text-base px-4 py-2"
-                                placeholder="Username" type="text" required>
-                        </div>
-                        <!-- Password input -->
-                        <div class="p-2 w-full">
-                            <input
-                                class="w-full rounded border border-white text-white focus:outline-none focus:border-red-700 text-base px-4 py-2"
-                                placeholder="Password" type="password" required>
-                        </div>
-                        <!-- Login Button -->
-                        <div class="p-2 w-full">
-                            <button
+                                placeholder="Password" type="password" name="password" required>
+                            </div>
+                            <!-- Login Button -->
+                            <div class="p-2 w-full">
+                                <button type="submit"
                                 class="flex mx-auto text-white bg-black border-0 py-2 px-8 focus:outline-none hover:bg-gray-900 rounded text-lg">Sign
                                 In</button>
-                        </div>
-                    </form>
-                    <!-- form ends here -->
-                    <!-- links -->
-                    <div class="p-2 w-full pt-8 mt-8 border-t border-gray-800 text-center">
-                        <!-- Link to mail ID -->
-                        <a class="text-indigo-500"
+                            </div>
+                            <% messages.error %>
+                        </form>
+                        <!-- form ends here -->
+                        <!-- links -->
+                        <div class="p-2 w-full pt-8 mt-8 border-t border-gray-800 text-center">
+                            <!-- Link to mail ID -->
+                            <a class="text-indigo-500"
                             href="mailto:contact.infinity.chat@gmail.com">contact.infinity.ui@gmail.com</a>
-                        <br /><br />
-                        <!-- Social media links -->
+                            <br /><br />
+                            <!-- Social media links -->
                         <!-- facebook -->
                         <span class="inline-flex">
                             <a class="text-gray-500">
@@ -321,5 +317,3 @@
     </footer>
 
 </body>
-
-</html>

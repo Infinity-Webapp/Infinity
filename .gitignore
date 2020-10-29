@@ -1,7 +1,9 @@
+.dist
 $RECYCLE.BIN
-System Volume Information
-Videos
-Static/common/script - dump/
-Static/common/script/jquery.js
 node_modules
 global_chat_server/node_modules
+Static/common/script - dump/
+Static/common/script/jquery.js
+System Volume Information
+Videos
+.env
